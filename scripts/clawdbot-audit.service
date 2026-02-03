@@ -1,0 +1,37 @@
+# Clawdbot Audit Log Streamer — systemd user service
+#
+# Install as a user service:
+#   mkdir -p ~/.config/systemd/user
+#   cp clawdbot-audit.service ~/.config/systemd/user/
+#   systemctl --user daemon-reload
+#   systemctl --user enable --now clawdbot-audit
+#
+# Before installing, update the two paths below:
+#   WorkingDirectory → your Clawdbot workspace (where audit-config.json lives)
+#   ExecStart        → absolute path to the audit-log-pusher.sh script
+#
+
+[Unit]
+Description=Clawdbot Audit Log Streamer
+After=network.target
+
+[Service]
+Type=simple
+
+# >>> EDIT THESE PATHS <<<
+# Set WorkingDirectory to your Clawdbot workspace root
+# (the directory that contains the skills/ folder and audit-config.json)
+WorkingDirectory=/home/USER/clawd
+
+# Set ExecStart to the absolute path of the entry-point script
+ExecStart=/home/USER/clawd/skills/audit-log-pusher/scripts/audit-log-pusher.sh
+
+Restart=always
+RestartSec=5
+
+# Optional hardening (uncomment if desired)
+# ProtectHome=read-only
+# NoNewPrivileges=true
+
+[Install]
+WantedBy=default.target

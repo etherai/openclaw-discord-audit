@@ -1,0 +1,9 @@
+{
+  "discord_token": "YOUR_DISCORD_BOT_TOKEN",
+  "bot_user_id": "YOUR_BOT_USER_ID",
+  "audit_channel_id": "YOUR_AUDIT_CHANNEL_ID",
+  "sessions_dir": "~/.clawdbot/agents/main/sessions",
+  "watch_channels": ["CHANNEL_ID_1"],
+  "state_file": "~/.clawdbot/audit-forwarded.json",
+  "poll_interval": 3
+}

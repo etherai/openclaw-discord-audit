@@ -1,0 +1,4 @@
+# Config with secrets
+scripts/audit-config.json
+*.pyc
+__pycache__/

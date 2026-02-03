@@ -1,5 +1,7 @@
 # Clawdbot Audit Log Pusher
 
+> ⚠️ **Disclaimer:** This software has **not been security audited**. It handles Discord bot tokens and interacts with the Discord API. Use at your own risk. Review the code before deploying in any environment where security is a concern. Do not expose `audit-config.json` or any file containing your bot token.
+
 Stream every Clawdbot action — incoming messages, assistant reasoning, tool calls, and outgoing replies — into a dedicated Discord audit channel in real time.
 
 Three scripts work together to give you full visibility into what your Clawdbot agent is doing, across all sessions, without touching the main conversation flow.

@@ -1,5 +1,7 @@
 # AGENTS.md — Audit Log Pusher Setup Guide
 
+> ⚠️ **Disclaimer:** This software has **not been security audited**. It handles Discord bot tokens and makes Discord API calls. Review the code before deploying. Never commit or expose `audit-config.json`.
+
 This file provides instructions for AI agents (Clawdbot instances) to set up and configure the Discord Audit Log Pusher.
 
 ## What This Does
